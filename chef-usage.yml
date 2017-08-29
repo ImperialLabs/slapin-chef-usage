@@ -1,0 +1,10 @@
+
+plugin:
+    type: container
+    listen_type: passive
+    data_type: all
+    config:
+      Image: 'slapi/slapin-chef-usage'
+      HostConfig:
+        Binds:
+          - '/path/to/pivotal.pem:/chef-usage.pem'
