@@ -37,6 +37,9 @@ plugin:
     data_type: all
     config:
       Image: 'slapi/slapin-chef-usage'
+      Env:
+        - ENTERPRISE='true'
+        - CHEF_SERVER_URL='https://chef.domain.com'
       HostConfig:
         Binds:
           - '/path/to/pivotal.pem:/chef-usage.pem'
@@ -54,6 +57,9 @@ plugin:
     build: true
     config:
       Image: 'chef-usage'
+      Env:
+        - ENTERPRISE='true'
+        - CHEF_SERVER_URL='https://chef.domain.com'
       HostConfig:
         Binds:
           - '/path/to/pivotal.pem:/chef-usage.pem'
